@@ -1,0 +1,47 @@
+{
+  "model": "ResNet18 frozen backbone + trained linear head",
+  "dataset": "Local CIFAKE subset (data/test)",
+  "n_test": 1000,
+  "class_order": [
+    "FAKE",
+    "REAL"
+  ],
+  "accuracy": 0.854,
+  "confusion_matrix_rows_actual_columns_predicted": [
+    [
+      448,
+      52
+    ],
+    [
+      94,
+      406
+    ]
+  ],
+  "classification_report": {
+    "FAKE": {
+      "precision": 0.8265682656826568,
+      "recall": 0.896,
+      "f1-score": 0.8598848368522073,
+      "support": 500.0
+    },
+    "REAL": {
+      "precision": 0.8864628820960698,
+      "recall": 0.812,
+      "f1-score": 0.8475991649269311,
+      "support": 500.0
+    },
+    "accuracy": 0.854,
+    "macro avg": {
+      "precision": 0.8565155738893633,
+      "recall": 0.8540000000000001,
+      "f1-score": 0.8537420008895692,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.8565155738893634,
+      "recall": 0.854,
+      "f1-score": 0.8537420008895692,
+      "support": 1000.0
+    }
+  }
+}
