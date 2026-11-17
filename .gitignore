@@ -1,0 +1,9 @@
+.venv/
+.venv-1/
+
+data/
+cifake-full/
+archive.zip
+
+__pycache__/
+*.pyc
