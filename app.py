@@ -1,5 +1,6 @@
 import torch
 import gradio as gr
+import os
 
 from torch import nn
 from torchvision import models, transforms
@@ -108,4 +109,14 @@ demo = gr.Interface(
 # ==========================================
 
 if __name__ == "__main__":
-    demo.launch(share=True)
+    import os
+
+    port = int(os.environ.get("PORT", "10000"))
+
+    print(f"Starting Gradio on 0.0.0.0:{port}", flush=True)
+
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        share=False
+    )
